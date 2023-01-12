@@ -1,0 +1,2 @@
+Passo 1 - Abrir o arquivo "Projeto" no VSCode (ou em algum outro editor de código).
+Passo 2 - Usar o comando a seguir no teminal integrado do arquivo "Projeto" para executar a aplicação: ng serve --port 333 -o

@@ -1,0 +1,44 @@
+mat-toolbar{
+  background-color: #666666;
+  color: rgb(2, 15, 4);
+}
+
+.toolbar{
+  font-size: 2.0rem;
+  height: 80px;
+  justify-content: center;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgb(253, 250, 250);
+}
+
+.example-spacer {
+    margin: 15%;
+  }
+
+.body{
+  display: flex;
+  justify-content: center;
+  margin: 16px 0;
+}
+
+.conteudo{
+  width: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cotacao{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.card_cotacao{
+  background-color: #666666;
+  font-size: 1.7rem;
+  font-weight: 1000;
+  color: #050505;
+  border-radius: 20px;
+}
+

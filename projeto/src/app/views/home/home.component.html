@@ -1,0 +1,59 @@
+<div>
+    <mat-toolbar>
+        <mat-toolbar-row class="toolbar">
+            
+            <span>Projeto Cotação<mat-icon> monetization_on</mat-icon></span>
+            <span class="example-spacer"></span>      
+        </mat-toolbar-row>
+    </mat-toolbar>
+    
+    <div class="body">
+        <div class="conteudo">
+            <div class="cotacao">
+                <mat-card class="card_cotacao">
+                    <mat-card-content> 
+
+                        <span>Moeda Real </span><br><br>
+                        <span> {{dadoscota?.brl}} {{dadoscota?.real}} |</span>
+                        <span> {{dadoscota?.hora | date: 'HH:mm'}} </span>
+                    </mat-card-content>
+                </mat-card>
+
+                <mat-card class="card_cotacao">
+                    <mat-card-content> 
+
+                        <span>Moeda Dolar </span><br><br>
+                        <span>{{dadoscota?.usd}} 1.00 |</span>
+                        <span> {{dadoscota?.hora | date: 'HH:mm'}} </span>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+            
+            <div class="historico">
+                <table mat-table [dataSource]="dataSource" matSort  class="mat-elevation-z8">
+
+                    <ng-container matColumnDef="Data">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by hora"> Hora </th>
+                    <td mat-cell *matCellDef="let element"> {{element.Data | date: 'HH:mm'}} </td>
+                    </ng-container>
+                
+                    <ng-container matColumnDef="Valor">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Valor </th>
+                    <td mat-cell *matCellDef="let element"> {{element.Valor}} </td>
+                    </ng-container>
+                
+                
+                    <ng-container matColumnDef="Diferenca">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Diferença </th>
+                    <td mat-cell *matCellDef="let element"> {{element.Diferenca}} </td>
+                    </ng-container>
+                
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                </table>
+
+            </div>
+
+        </div>
+    </div>
+</div>
